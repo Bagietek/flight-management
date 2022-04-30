@@ -1,0 +1,9 @@
+[
+  {
+    "flightId": 0,
+    "flightNumber": 4629,
+    "departureAirportIATACode": "LAX",
+    "arrivalAirportIATACode": "PPX",
+    "departureDate": "2020-02-23T06:54:20-01:00"
+  }
+]

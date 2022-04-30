@@ -16,13 +16,11 @@ public class CargoEntityRepoImp implements CargoEntityRepo{
     HashMap<Integer, LoadEntity> allLoadList;
 
     public CargoEntityRepoImp() throws IOException, ParseException {
-        File configFile = new File("./src/main/resources/Config.json");
+        Configuration conf = new Configuration();
+        File file = new File("./src/main/resources/" + conf.getCargoEntitiesFileName());
+        FileReader fileReader = new FileReader(file);
         JSONParser jsonParser = new JSONParser();
-        FileReader fileReader = new FileReader(configFile);
-        JSONObject jsonObject = (JSONObject) jsonParser.parse(fileReader);
-        File file = new File("./src/main/resources/" + jsonObject.get("CargoEntity"));
-        fileReader.close();
-        fileReader = new FileReader(file);
+        JSONObject jsonObject;
         JSONArray loadList = (JSONArray) jsonParser.parse(fileReader);
         allLoadList = new HashMap<>();
         for (Object o : loadList){

@@ -17,16 +17,14 @@ public class FlightEntityRepoImp implements FlightEntityRepo{
     private LinkedList<Flight> allFlights;
 
     public FlightEntityRepoImp() throws IOException, ParseException {
-        File configFile = new File("./src/main/resources/Config.json");
+        Configuration conf = new Configuration();
+        File file = new File("./src/main/resources/" + conf.getFlightEntitiesFileName());
+        FileReader fileReader = new FileReader(file);
         JSONParser jsonParser = new JSONParser();
-        FileReader fileReader = new FileReader(configFile);
-        JSONObject jsonObject = (JSONObject) jsonParser.parse(fileReader);
-        File file = new File("./src/main/resources/" + jsonObject.get("FlightEntity"));
-        fileReader.close();
-        fileReader = new FileReader(file);
         JSONArray flightList = (JSONArray) jsonParser.parse(fileReader);
         allFlights = new LinkedList<>();
         DateTimeFormatter formatter = DateTimeFormatter.ISO_OFFSET_DATE_TIME;
+        JSONObject jsonObject;
         for (Object o : flightList){
             Flight flight = new Flight();
             jsonObject = (JSONObject) o;
