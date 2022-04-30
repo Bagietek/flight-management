@@ -1,0 +1,37 @@
+[
+  {
+    "flightId": 0,
+    "flightNumber": 4629,
+    "departureAirportIATACode": "LAX",
+    "arrivalAirportIATACode": "PPX",
+    "departureDate": "2020-02-23T06:54:20-01:00"
+  },
+  {
+    "flightId": 1,
+    "flightNumber": 7940,
+    "departureAirportIATACode": "SEA",
+    "arrivalAirportIATACode": "KRK",
+    "departureDate": "2016-08-05T06:00:51-02:00"
+  },
+  {
+    "flightId": 2,
+    "flightNumber": 7255,
+    "departureAirportIATACode": "ANC",
+    "arrivalAirportIATACode": "KRK",
+    "departureDate": "2019-09-19T01:05:59-02:00"
+  },
+  {
+    "flightId": 3,
+    "flightNumber": 2073,
+    "departureAirportIATACode": "ANC",
+    "arrivalAirportIATACode": "LEW",
+    "departureDate": "2020-02-05T10:13:11-01:00"
+  },
+  {
+    "flightId": 4,
+    "flightNumber": 2888,
+    "departureAirportIATACode": "SEA",
+    "arrivalAirportIATACode": "GDN",
+    "departureDate": "2017-06-30T01:09:55-02:00"
+  }
+]
